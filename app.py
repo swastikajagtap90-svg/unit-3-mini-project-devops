@@ -233,8 +233,10 @@ footer {
 
 @app.route("/")
 def home():
-    return render_template_string(DASHBOARD)
-
+    return jsonify({
+        "message": "Hello! My DevOps mini-project is running.",
+        "status": "success"
+    })
 
 @app.route("/health")
 def health():
